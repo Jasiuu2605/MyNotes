@@ -1,0 +1,112 @@
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     height: 100vh;
+     background-color: rgba(220, 220, 2020, 0.977);
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    height: 120px;
+}
+.menu button,
+.save,
+.cancel {
+    padding: 12px 25px;
+    background: none;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+
+ }
+.menu button:hover, 
+.save:hover,
+.cancel:hover {
+    background-color: rgb(109, 108, 108);
+    color: #ddd;
+}
+.icon { margin-right: 10px;}
+
+.note-area {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.note {
+    margin: 40px 20px;
+    width: 240px;
+    background-color: rgb(240, 229, 3);
+    border: 2px solid black;
+}
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .06) ;
+}
+
+.note-header .delete-note {
+    background: none;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.note-body {
+    padding: 20px 15px;
+    font-size: 14px;
+}
+
+.note-panel {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 0;
+    border-radius: 5px;
+    width: 600px;
+    background-color: #fff;
+    box-shadow: 0 0 10px black;
+}
+
+.note-panel h2 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.note-panel label {
+    margin-bottom: 10px;
+}
+
+textarea,
+.note-panel #category {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    min-width: 90%;
+    max-width: 90%;
+    max-height: 500px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.note-panel .error {
+    margin-bottom: 20px;
+    color: red;
+    visibility: hidden;
+}
